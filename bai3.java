@@ -1,41 +1,38 @@
-package java;
+package baitap1;
 import java.util.Scanner;
- public class bai3{
+public class bai3 {
     public static void main(String[] args){
-        SanPham sp1=new SanPham(tensp,donGia);
-		sp1.nhap();
-		SanPham sp2=new SanPham(tenSP,donGia,giamGia);
-		sp2.nhap();
-		
-		System.out.print("Xuat thong tin : ");
-		sp1.xuat();
-		sp2.xuat();
+        matran mt = new matran();
+        mt.Nhap();
+        mt.Hienthi();
+    }
+    
+}
+class matran{
+    private int i, j, m,n ,k;
+    private static int [][] M= new int [9][9];
+    public void Hienthi(){
+        for(i=0;i<n;i++){
+            for(j=0;j<m;j++){
+                System.out.println([i][j] +"");
+            }
+            System.out.println();
+        }
+    
+    }
+     public void Nhap(){
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Nhập số hàng: ");
+        n = scan.nextInt();
+        System.out.println("Nhập số cột");
+        m = scan.nextInt();
+        for(i=0;i<n;i++){
+            for(j=0;j<m;j++){
+                System.out.println("Nhập ma trận M [" +i+"]["+j+"]=");
+                M[i][j] =scan.nextInt();
+            }
+        }
     }
 }
- class SanPham {
-    String tenSP;
-    double donGia;
-    double giamGia;
-    double  getThueThuNhap;
-  void nhap() {
-     Scanner sc = new Scanner (System.in);
-    System.out.print("Ten Sp : ");
-    tenSP = sc.nextLine();
-    System.out.print("Don gia : ");
-    donGia = sc.nextDouble();
-    System.out.print("Giam gia :"+giamGia);
-    giamGia = sc.nextDouble();
-}
- 
-  void xuat() {
-    System.out.print("Ten SP : "+tenSP);
-    System.out.print("Don gia : "+donGia);
-    System.out.print("Thue thu nhap : "+(0.1*donGia));
-    System.out.print("Giam gia : "+giamGia);
-}
-public SanPham(String tenSP, double donGia, double giamGia) {
-    this.tenSP=tenSP;
-    this.donGia=donGia;
-    this.giamGia=giamGia;
-}
- }
+  
+
